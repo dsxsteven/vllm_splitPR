@@ -97,6 +97,9 @@ class PplxPrepareAndFinalize(mk.FusedMoEPrepareAndFinalize):
     def supports_async(self) -> bool:
         return True
 
+    def have_expert_num_tokens(self) -> bool: 
+        return True
+
     def prepare_async(
         self,
         a1: torch.Tensor,
